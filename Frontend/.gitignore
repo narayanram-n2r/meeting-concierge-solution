@@ -1,0 +1,13 @@
+#directories
+bower_components
+node_modules
+dist
+build
+release
+
+#files
+debug.log
+npm-debug.log
+app.log
+*.tgz
+*.log

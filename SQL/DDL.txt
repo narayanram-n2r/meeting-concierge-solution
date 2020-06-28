@@ -1,0 +1,45 @@
+CREATE TABLE `UserMaster` (
+  `userId` int NOT NULL AUTO_INCREMENT,
+  `firstName` varchar(45) NOT NULL,
+  `lastName` varchar(45) NOT NULL,
+  `middleName` varchar(45) DEFAULT NULL,
+  `email` varchar(255) NOT NULL,
+  `passwordHash` varchar(32) NOT NULL,
+  `userRole` varchar(20) NOT NULL,
+  `createdAt` datetime NOT NULL,
+  `lastLoginAt` datetime DEFAULT NULL,
+  PRIMARY KEY (`userId`),
+  UNIQUE KEY `email_UNIQUE` (`email`),
+  UNIQUE KEY `userId_UNIQUE` (`userId`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Data Source for User Details.'
+
+CREATE TABLE `FacilityMaster` (
+  `roomId` int NOT NULL AUTO_INCREMENT,
+  `roomName` varchar(45) NOT NULL,
+  `roomType` varchar(30) NOT NULL,
+  `roomCapacity` int(10) unsigned zerofill DEFAULT NULL,
+  `isProjectorAvailable` tinyint NOT NULL,
+  `towerName` varchar(45) NOT NULL,
+  `floorNumber` varchar(20) NOT NULL,
+  `createdAt` datetime NOT NULL,
+  `lastUpdatedAt` datetime DEFAULT NULL,
+  PRIMARY KEY (`roomId`),
+  UNIQUE KEY `roomId_UNIQUE` (`roomId`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Data Source for all the Facility available in the location.'
+
+CREATE TABLE `TransactionMaster` (
+  `transactionId` varchar(15) NOT NULL,
+  `roomId` int NOT NULL,
+  `userId` int NOT NULL,
+  `startTime` datetime NOT NULL,
+  `endTime` datetime NOT NULL,
+  `bookingStatus` varchar(20) NOT NULL,
+  `createdAt` datetime NOT NULL,
+  `lastUpdatedAt` datetime DEFAULT NULL,
+  PRIMARY KEY (`transactionId`),
+  UNIQUE KEY `transactionId_UNIQUE` (`transactionId`),
+  KEY `userId_idx` (`userId`),
+  KEY `roomId_idx` (`roomId`),
+  CONSTRAINT `roomId` FOREIGN KEY (`roomId`) REFERENCES `FacilityMaster` (`roomId`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `userId` FOREIGN KEY (`userId`) REFERENCES `UserMaster` (`userId`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Data Source | Sink for all the Transaction made in the application.'

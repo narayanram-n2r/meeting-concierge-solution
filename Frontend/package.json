@@ -1,0 +1,25 @@
+{
+  "name": "meeting-concierge",
+  "version": "1.0.0",
+  "description": "On-Line Facility Booking",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/narayanram-n2r/meeting-concierge.git"
+  },
+  "keywords": [
+    "meeting-concierge"
+  ],
+  "author": "Narayan Ram Narayanan",
+  "license": "CC0-1.0",
+  "bugs": {
+    "url": "https://github.com/narayanram-n2r/meeting-concierge/issues"
+  },
+  "homepage": "https://github.com/narayanram-n2r/meeting-concierge#readme",
+  "devDependencies": {
+    "electron": "^9.0.4"
+  }
+}
