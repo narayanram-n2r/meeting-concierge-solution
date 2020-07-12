@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm"
+        version="2.0">
+
+    <entity class="com.coherenttechno.meetingconciergesolution.repository.model.FacilityMasterEntity">
+        <table name="FacilityMaster" schema="meeting-concierge-solution" catalog=""/>
+        <attributes>
+            <id name="roomId">
+                <column name="roomId" precision="-1"/>
+            </id>
+            <basic name="roomName">
+                <column name="roomName" length="45"/>
+            </basic>
+            <basic name="roomType">
+                <column name="roomType" length="30"/>
+            </basic>
+            <basic name="roomCapacity">
+                <column name="roomCapacity" nullable="false" precision="10"/>
+            </basic>
+            <basic name="isProjectorAvailable">
+                <column name="isProjectorAvailable" precision="-1"/>
+            </basic>
+            <basic name="towerName">
+                <column name="towerName" length="45"/>
+            </basic>
+            <basic name="floorNumber">
+                <column name="floorNumber" length="20"/>
+            </basic>
+            <basic name="createdAt">
+                <column name="createdAt" precision="-1"/>
+            </basic>
+            <basic name="lastUpdatedAt">
+                <column name="lastUpdatedAt" nullable="false" precision="-1"/>
+            </basic>
+        </attributes>
+    </entity>
+    <entity class="com.coherenttechno.meetingconciergesolution.repository.model.TransactionMasterEntity">
+        <table name="TransactionMaster" schema="meeting-concierge-solution" catalog=""/>
+        <attributes>
+            <id name="transactionId">
+                <column name="transactionId" length="15"/>
+            </id>
+            <basic name="startTime">
+                <column name="startTime" precision="-1"/>
+            </basic>
+            <basic name="endTime">
+                <column name="endTime" precision="-1"/>
+            </basic>
+            <basic name="bookingStatus">
+                <column name="bookingStatus" length="20"/>
+            </basic>
+            <basic name="createdAt">
+                <column name="createdAt" precision="-1"/>
+            </basic>
+            <basic name="lastUpdatedAt">
+                <column name="lastUpdatedAt" nullable="false" precision="-1"/>
+            </basic>
+            <many-to-one name="facilityMasterByRoomId" optional="true"
+                         target-entity="com.coherenttechno.meetingconciergesolution.repository.model.FacilityMasterEntity">
+                <join-column name="roomId" referenced-column-name="roomId"/>
+            </many-to-one>
+        </attributes>
+    </entity>
+    <entity class="com.coherenttechno.meetingconciergesolution.repository.model.UserMasterEntity">
+        <table name="UserMaster" schema="meeting-concierge-solution" catalog=""/>
+        <attributes>
+            <id name="userId">
+                <column name="userId" precision="-1"/>
+            </id>
+            <basic name="firstName">
+                <column name="firstName" length="45"/>
+            </basic>
+            <basic name="lastName">
+                <column name="lastName" length="45"/>
+            </basic>
+            <basic name="middleName">
+                <column name="middleName" nullable="false" length="45"/>
+            </basic>
+            <basic name="email">
+                <column name="email"/>
+            </basic>
+            <basic name="passwordHash">
+                <column name="passwordHash" length="32"/>
+            </basic>
+            <basic name="userRole">
+                <column name="userRole" length="20"/>
+            </basic>
+            <basic name="createdAt">
+                <column name="createdAt" precision="-1"/>
+            </basic>
+            <basic name="lastLoginAt">
+                <column name="lastLoginAt" nullable="false" precision="-1"/>
+            </basic>
+        </attributes>
+    </entity>
+</entity-mappings>
