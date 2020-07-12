@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Add Facility</title>
+	<link rel="stylesheet" href="addfacility.css" type='text/css' />
+	<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+</head>
+<body>
+	<nav>
+		<p>Meeting Concierge</p>
+		<div class="logo-image">
+			<img src="imglogo.png" alt="logo" >
+		</div>
+
+		
+		<button class="burger" id="burger">
+			=
+		</button>
+
+		<ul>
+			<li><a href="adduser.html">Add user</a></li>
+			<li><a href="removeuser.html">Remove user</a></li>
+			<li><a href="addfacility.html">Add facility</a></li>
+			<li><a href="removefacility.html">Remove facility</a></li>
+			<li><a href="#">Signout</a></li>
+		</ul>
+	</nav>
+	<div class="wrapper">
+		
+			<h2>Add Facility</h2>
+		
+		<form class="form" id="form">
+			<div class="sidebyside">
+					<div class="form-control">
+						<label>Room Name</label>
+						<input type="text" placeholder="Room name" id="rname">
+						<i class="fas fa-check-circle"></i>
+						<i class="fas fa-exclamation-circle"></i>
+						<small>Error message</small>
+					</div>
+
+					<div class="form-control">
+						<label>Room Type</label>
+						<input type="text" placeholder="Room Type" id="rtype">
+						<i class="fas fa-check-circle"></i>
+						<i class="fas fa-exclamation-circle"></i>
+						<small>Error message</small>
+					</div>
+			</div>
+			<div class="sidebyside">
+
+					<div class="form-control">
+						<label>Maximum Capacity</label>
+						<input type="text" placeholder="100" id="capacity">
+						<i class="fas fa-check-circle"></i>
+						<i class="fas fa-exclamation-circle"></i>
+						<small>Error message</small>
+					</div>
+
+					<div class="form-control proj">
+						<label for="avail">Projector Available</label>
+							<select id="avail">
+		  						<option value="yes">Yes</option>
+		  						<option value="no">No</option>
+							</select>
+					</div>
+			</div>
+			<div class="sidebyside">
+
+					<div class="form-control">
+						<label>Tower Name</label>
+						<input type="text" placeholder="Tower name" id="tname">
+						<i class="fas fa-check-circle"></i>
+						<i class="fas fa-exclamation-circle"></i>
+						<small>Error message</small>
+					</div>
+
+					<div class="form-control">
+						<label>Floor Name</label>
+						<input type="text" placeholder="Floor Type" id="fname">
+						<i class="fas fa-check-circle"></i>
+						<i class="fas fa-exclamation-circle"></i>
+						<small>Error message</small>
+					</div>
+			</div>
+
+
+			<button type="Submit">Submit</button>
+		</form>
+	</div>
+	<!-- Footer -->
+	<footer class="footer">
+  		<div class="container">
+    		<div class="content">
+      			<p>&copy; 2020 - Meeting Concierge </p>
+    		</div>
+  		</div>
+	</footer>
+	<script src="addfacility.js"></script>
+</body>
+</html>

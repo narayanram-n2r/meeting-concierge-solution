@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Remove User</title>
+	<meta name='viewport' content='width=device-width, initial-scale=1'>
+	<link rel="stylesheet" href="removeuser.css" type='text/css' />
+	<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+</head>
+<body>
+	<nav>
+		<p>Meeting Concierge</p>
+		<div class="logo-image">
+			<img src="imglogo.png" alt="logo" >
+		</div>
+
+		
+		<button class="burger" id="burger">
+			=
+		</button>
+
+		<ul>
+			<li><a href="#">Add user</a></li>
+			<li><a href="#">Remove user</a></li>
+			<li><a href="#">Add facility</a></li>
+			<li><a href="#">Remove facility</a></li>
+			<li><a href="#">Signout</a></li>
+		</ul>
+	</nav>
+	<div class="wrapper">
+		
+			<h2>Remove User</h2>
+		
+		<form class="form" id="form">
+
+			<div class="form-control">
+					<label>Email*</label>
+					<input type="email" placeholder="hello@gmail.com" id="email">
+					<i class="fas fa-check-circle"></i>
+					<i class="fas fa-exclamation-circle"></i>
+					<small>Error message</small>
+			</div>
+			
+			<div class="form-control">
+				<label>First Name*</label>
+				<input type="text" placeholder="Firstname" id="fname">
+				<i class="fas fa-check-circle"></i>
+				<i class="fas fa-exclamation-circle"></i>
+				<small>Error message</small>
+			</div>
+
+			<div class="form-control role">
+					<label for="role">Role</label>
+						<select id="role">
+		  					<option value="user">User</option>
+		  					<option value="admin">Admin</option>
+						</select>
+			</div>
+			
+	
+			<button type="Submit">Submit</button>
+		</form>
+	</div>
+	<!-- Footer -->
+	<footer class="footer">
+  		<div class="containe">
+    		<div class="content">
+      			<p>&copy; 2020 - Meeting Concierge </p>
+    		</div>
+  		</div>
+	</footer>
+	<script src="removeuser.js"></script>
+</body>
+</html>
