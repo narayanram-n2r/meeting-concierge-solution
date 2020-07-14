@@ -1,8 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
 
 *{
-	/*box-sizing: border-box;*/
-
+	
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
@@ -17,6 +16,7 @@ body{
 	
 
 }
+
 
 
 nav{
@@ -94,31 +94,7 @@ nav ul li a:hover::after {
 	
 }
 
-@media (max-width: 480px){
-	.burger{
-		display: block;
-	}
-	nav ul{
-		background-color: #fff; 
-		box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
-		flex-direction: column;
-		position: fixed;
-		top: 80px;
-		left: 10%;
-		width: 80%;
-		text-align: center;
-		transform: translateX(120%);
-		transition: transform 0.4s ease;
-	}
-
-	nav ul.show{
-		transform: translateX(0);
-	}
-
-	nav ul li{
-		margin: 15px;
-	}
-}
+@media screen and (min-width: 481px){
 
 .sidebyside {
   display: flex;
@@ -182,7 +158,7 @@ nav ul li a:hover::after {
 	font-family: inherit;
 	font-size: 14px;
 	padding: 10px;
-	width: 75%
+	width: 75%;
 }
 
 .form-control i{
@@ -241,13 +217,13 @@ nav ul li a:hover::after {
 
 
 .footer {
-  position: absolute;
+  position: fixed;
   bottom: 0;
   padding: 5px;
   width: 100%;
   background-color: black;
   color: #FFDB15;
-  text-align: center
+  text-align: center;
 }
 
 /*@media only screen and (min-width: 800px){
@@ -255,3 +231,5 @@ nav ul li a:hover::after {
     scale:10%;
 	}
 }*/
+
+}

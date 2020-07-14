@@ -1,3 +1,9 @@
+const burger=document.getElementById('burger');
+const ul =document.querySelector('nav ul');
+
+burger.addEventListener('click', () => {
+	ul.classList.toggle('show');
+});
 const form=document.getElementById('form');
 const rname=document.getElementById('rname');
 const rtype=document.getElementById('rtype');

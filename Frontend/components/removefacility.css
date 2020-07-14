@@ -39,8 +39,8 @@ nav p{
 }
 
 .logo-image img{
-	height: 50px;
-	padding-left: 300px;
+	height: 40px;
+	padding-left: 40px;
 	
 }
 
@@ -91,7 +91,7 @@ nav ul li a::after {
 nav ul li a:hover::after {
 	transform: translateY(-15px);
 	opacity: 1;
-	S
+	
 }
 
 @media (max-width: 480px){

@@ -1,3 +1,9 @@
+const burger=document.getElementById('burger');
+const ul =document.querySelector('nav ul');
+
+burger.addEventListener('click', () => {
+	ul.classList.toggle('show');
+});
 const form=document.getElementById('form');
 const email=document.getElementById('email');
 const fname=document.getElementById('fname');

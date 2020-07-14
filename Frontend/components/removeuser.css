@@ -39,8 +39,8 @@ nav p{
 }
 
 .logo-image img{
-	height: 50px;
-	padding-left: 300px;
+	height: 40px;
+	padding-left: 40px;
 	
 }
 
@@ -94,42 +94,14 @@ nav ul li a:hover::after {
 	S
 }
 
-@media (max-width: 480px){
-	.burger{
-		display: block;
-	}
-	nav ul{
-		background-color: #fff; 
-		box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
-		flex-direction: column;
-		position: fixed;
-		top: 80px;
-		left: 10%;
-		width: 80%;
-		text-align: center;
-		transform: translateX(120%);
-		transition: transform 0.4s ease;
-	}
 
-	nav ul.show{
-		transform: translateX(0);
-	}
-
-	nav ul li{
-		margin: 15px;
-	}
-}
 .sidebyside {
   display: flex;
   flex-direction: row;
   align-content: space-around;
 }
 
-.nameInput {
-  display: flex;
-  flex-direction: column;
-  margin-right: 5px;
-}
+
 
 .wrapper{
 	position: absolute;
@@ -185,7 +157,7 @@ nav ul li a:hover::after {
 	font-family: inherit;
 	font-size: 14px;
 	padding: 10px;
-	width: 100%
+	width: 100%;
 }
 
 .form-control i{

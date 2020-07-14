@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
 
 *{
-	/*box-sizing: border-box;*/
 
 	margin: 0;
 	padding: 0;
@@ -39,8 +38,8 @@ nav p{
 }
 
 .logo-image img{
-	height: 50px;
-	padding-left: 300px;
+	height: 40px;
+	padding-left: 40px;
 	
 }
 
@@ -91,45 +90,18 @@ nav ul li a::after {
 nav ul li a:hover::after {
 	transform: translateY(-15px);
 	opacity: 1;
-	S
+	
 }
 
-@media (max-width: 480px){
-	.burger{
-		display: block;
-	}
-	nav ul{
-		background-color: #fff; 
-		box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
-		flex-direction: column;
-		position: fixed;
-		top: 80px;
-		left: 10%;
-		width: 80%;
-		text-align: center;
-		transform: translateX(120%);
-		transition: transform 0.4s ease;
-	}
+@media screen and (min-width: 481px){
 
-	nav ul.show{
-		transform: translateX(0);
-	}
-
-	nav ul li{
-		margin: 15px;
-	}
-}
 .sidebyside {
   display: flex;
   flex-direction: row;
   align-content: space-around;
 }
 
-.nameInput {
-  display: flex;
-  flex-direction: column;
-  margin-right: 5px;
-}
+
 
 .wrapper{
 	position: absolute;
@@ -174,7 +146,7 @@ nav ul li a:hover::after {
 	font-family: inherit;
 	font-size: 14px;
 	padding: 10px;
-	/*width: 50%;*/
+	width: 75%;
 
 }
 
@@ -185,13 +157,13 @@ nav ul li a:hover::after {
 	font-family: inherit;
 	font-size: 14px;
 	padding: 10px;
-	width: 57%
+	width: 55%;
 }
 
 .form-control i{
 	position: absolute;
 	top: 40px;
-	left: 185px;
+	left: 250px;
 	visibility: hidden;
 }
 
@@ -244,11 +216,13 @@ nav ul li a:hover::after {
 
 
 .footer {
-  position: absolute;
+  position: fixed;
   bottom: 0;
   padding: 5px;
   width: 100%;
   background-color: black;
   color: #FFDB15;
   text-align: center
+}
+
 }
