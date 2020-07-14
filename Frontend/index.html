@@ -1,17 +1,53 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
-    <meta content="default-src 'self'; script-src 'self'" http-equiv="Content-Security-Policy">
-    <title>Hello World!</title>
+   <meta charset="UTF-8">
+	<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+	<meta content="default-src 'self'; script-src 'self'" http-equiv="Content-Security-Policy">
+	<title>Login</title>
+	<link rel="stylesheet" href="components/login.css" type='text/css' />
+	<script src='https://kit.fontawesome.com/a076d05399.js'></script>
 </head>
 <body>
-<h1>Hello World!</h1>
-We are using Node.js <span id="node-version"></span>,
-Chromium <span id="chrome-version"></span>,
-and Electron <span id="electron-version"></span>.
+<div class="container">
+		<div class="header">
+			<h2>Login</h2>
+		</div>
+		<form class="form" id="form" action="success.html" method="post">
+			<div class="form-control">
+				<label>Email</label>
+				<input type="email" placeholder="user@gmail.com" id="email" >
+				<i class="fas fa-check-circle"></i>
+				<i class="fas fa-exclamation-circle"></i>
+				<small>Error message</small>
+			</div>
 
+			<div class="form-control">
+				<label>Password</label>
+				<input type="password" placeholder="Password" id="password">
+				<i class="fas fa-check-circle"></i>
+				<i class="fas fa-exclamation-circle"></i>
+				<small>Error message</small>
+			</div>
+			<div class="role">
+				<label for="role">Role</label>
+					<select id="role">
+  						<option value="user">User</option>
+  						<option value="admin">Admin</option>
+					</select>
+			</div>
+			<button type="Submit" id="myBtn">Submit</button>
+		</form>
+	</div>
+	<!-- Footer -->
+	<footer class="footer">
+  <div class="containe">
+    <div class="content">
+      <p>&copy; 2020 - Meeting Concierge </p>
+    </div>
+  </div>
+</footer>
+<script  src="components/login.js"></script>
 <!-- You can also require other files to run in this process -->
 <script src="./renderer.js"></script>
 </body>

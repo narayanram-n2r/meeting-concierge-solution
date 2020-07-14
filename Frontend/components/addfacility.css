@@ -119,17 +119,13 @@ nav ul li a:hover::after {
 		margin: 15px;
 	}
 }
+
 .sidebyside {
   display: flex;
   flex-direction: row;
   align-content: space-around;
 }
 
-.nameInput {
-  display: flex;
-  flex-direction: column;
-  margin-right: 5px;
-}
 
 .wrapper{
 	position: absolute;
@@ -175,7 +171,7 @@ nav ul li a:hover::after {
 	font-family: inherit;
 	font-size: 14px;
 	padding: 10px;
-	/*width: 50%;*/
+	width: 75%;
 
 }
 
@@ -192,7 +188,7 @@ nav ul li a:hover::after {
 .form-control i{
 	position: absolute;
 	top: 40px;
-	left: 185px;
+	left: 177px;
 	visibility: hidden;
 }
 
@@ -254,8 +250,8 @@ nav ul li a:hover::after {
   text-align: center
 }
 
-@media only screen and (min-width: 800px){
+/*@media only screen and (min-width: 800px){
 	.wrapper {
     scale:10%;
 	}
-}
+}*/
